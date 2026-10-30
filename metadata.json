@@ -1,0 +1,6 @@
+{
+  "name": "GatherOS — The Celebration Operating System",
+  "description": "AI-powered celebration and event intelligence platform for planning, budgeting, designing, and executing weddings, birthdays, and community events.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
