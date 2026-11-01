@@ -6,9 +6,9 @@ GatherOS is a production-grade, AI-powered Event Intelligence Platform designed 
 
 ---
 
-## 🔗 Live Deployment & Demo
-- **🌐 Live Application:** [Insert Your Vercel Link Here]
-- **🎬 Product Walkthrough Reel:** [Insert Your Instagram Reel Link Here]
+## 🔗 Live Deployment 
+- **🌐 Live Application:** https://gatheros-murex.vercel.app/
+
 
 ---
 
