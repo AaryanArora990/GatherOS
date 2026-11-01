@@ -58,7 +58,7 @@ export default function App() {
   const [showLanding, setShowLanding] = useState<boolean>(() => {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
-      if (params.get('autostart') === '1') {
+      if (params.get('autostart') === '1' || sessionStorage.getItem('gatheros_return_to_copilot') === '1') {
         return false;
       }
     }
@@ -84,7 +84,11 @@ export default function App() {
     return localStorage.getItem(ACTIVE_EVENT_KEY) || INITIAL_DEMO_EVENTS[0].id;
   });
 
-  const [activeTab, setActiveTab] = useState<WorkspaceTab>('dashboard');
+  const [activeTab, setActiveTab] = useState<WorkspaceTab>(() =>
+    typeof window !== 'undefined' && sessionStorage.getItem('gatheros_return_to_copilot') === '1'
+      ? 'copilot'
+      : 'dashboard'
+  );
   const [isOnboardingOpen, setIsOnboardingOpen] = useState(false);
   const [onboardingCategory, setOnboardingCategory] = useState<EventCategory>('wedding');
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
@@ -97,6 +101,8 @@ export default function App() {
 
   // Load initial server events & AI status
   useEffect(() => {
+    sessionStorage.removeItem('gatheros_return_to_copilot');
+
     fetch('/api/ai/status')
       .then((r) => r.json())
       .then((data) => {

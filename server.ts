@@ -621,6 +621,11 @@ app.post('/api/ai/copilot', async (req, res) => {
   }
 
   try {
+    const recentConversation = (event.copilotHistory || [])
+      .slice(-6)
+      .map((message) => `${message.role === 'user' ? 'Organizer' : 'Copilot'}: ${message.content}`)
+      .join('\n');
+
     const prompt = `Active Event Context:
 - Name: ${event.name} (${event.category})
 - Date & Location: ${event.date} in ${event.location}
@@ -636,10 +641,11 @@ app.post('/api/ai/copilot', async (req, res) => {
       .filter((t) => t.status !== 'Completed')
       .map((t) => `${t.title} (Due ${t.dueDate})`)
       .join('; ')}
+- Recent Conversation: ${recentConversation || 'No earlier messages.'}
 
 User Question: "${userMessage}"
 
-Provide a concise, practical, encouraging response grounded in the exact numbers and details above, plus why your recommendations fit.`;
+Answer the user's actual question directly. Use the recent conversation only when it helps. Give specific, practical advice grounded in the event details and exact figures above; do not force unrelated suggestions or invent facts. Mention assumptions when exact details are unavailable. Keep the answer warm and concise, and explain briefly why the advice fits this event.`;
 
     const response = await withTimeout(
       ai.models.generateContent({
@@ -658,7 +664,7 @@ Provide a concise, practical, encouraging response grounded in the exact numbers
           },
         },
       }),
-      8000
+      20000
     );
 
     const parsed = JSON.parse((response.text ?? '{}').trim()) as {

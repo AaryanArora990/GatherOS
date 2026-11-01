@@ -1,4 +1,4 @@
-# ✨ GatherOS — The Celebration Operating System
+﻿# ✨ GatherOS — The Celebration Operating System
 > **Big Moments Deserve Intelligent Planning.**  
 > *Built for Google for Developers × Hack2Skill PromptWars Virtual*
 
@@ -65,9 +65,18 @@ Our prompt architecture evolved across three distinct phases to reach production
 
 ---
 
-## 💻 Local Setup & Installation
+## Local Setup
 
-1. **Clone the repository:**
+1. Install Node.js 20.19+ (or 22.12+) and npm.
+2. From the project directory, install dependencies:
    ```bash
-   git clone [https://github.com/](https://github.com/)<aaryanarora990>/GatherOS.git
-   cd GatherOS
+   npm install
+   ```
+3. To enable Gemini features, copy `.env.example` to `.env` and set `GEMINI_API_KEY` to a valid key. The app runs in demo/fallback mode without a key. Keep keys server-side; do not use `VITE_*` variables for secrets.
+4. Start the app:
+   ```bash
+   npm run dev
+   ```
+   Open http://localhost:3000. The Express server serves both the Vite client and `/api` endpoints.
+
+For production, run `npm run build` and then `npm start`. The build creates the client in `dist/` and the serverless API entry point in `api/index.js` for Vercel. Set `PORT` to change the local port.

@@ -55,6 +55,8 @@ export const CopilotView: React.FC<CopilotViewProps> = ({
     };
 
     const updatedHistory = [...event.copilotHistory, userMsg];
+    // If the browser restores this view after navigation, keep the organizer in the chat.
+    sessionStorage.setItem('gatheros_return_to_copilot', '1');
     onUpdateEvent({
       ...event,
       copilotHistory: updatedHistory,
@@ -72,11 +74,14 @@ export const CopilotView: React.FC<CopilotViewProps> = ({
         }),
       });
       const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || `Copilot request failed (${response.status})`);
+      }
 
       const assistantMsg: CopilotMessage = {
         id: `ai-${Date.now()}`,
         role: 'assistant',
-        content: data.content || 'I have analyzed your event details and updated recommendations.',
+        content: data.content || 'I could not form a useful answer for that question. Please try asking it another way.',
         reasoning: data.reasoning,
         actions: data.actions || [],
         timestamp: new Date().toISOString(),

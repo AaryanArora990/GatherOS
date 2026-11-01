@@ -110,6 +110,19 @@
     },
     "budgetItems": [
       {
+        "id": "cop-b-1793478450342",
+        "category": "Emergency reserve",
+        "title": "Weatherproof Canopy & Umbrella Valet Standby Estimate",
+        "allocatedAmount": 42500,
+        "plannedAmount": 42500,
+        "vendorQuotationAmount": 0,
+        "actualAmount": 0,
+        "paidAmount": 0,
+        "isCommitted": false,
+        "isAiEstimate": true,
+        "estimateAssumptions": "Added via Gather AI Copilot recommendation."
+      },
+      {
         "id": "jw-b1",
         "category": "Venue",
         "title": "Boutique Heritage Haveli Courtyard & Darbar Hall (Full Day)",
@@ -238,6 +251,17 @@
       }
     ],
     "timelineTasks": [
+      {
+        "id": "cop-t-1793478398174",
+        "title": "Execute 72-hour weather forecast review & canopy standby check",
+        "milestoneCategory": "Final event-day preparation",
+        "dueDate": "2026-12-18",
+        "priority": "High",
+        "status": "Pending",
+        "assignedPerson": "Lead Organizer",
+        "progress": 0,
+        "notes": "Created from Gather AI Copilot action"
+      },
       {
         "id": "cop-t-1793379038071",
         "title": "Audit multi-function decor reuse to save ₹30,600",
@@ -706,6 +730,309 @@
           }
         ],
         "timestamp": "2026-10-30T16:50:37.695Z",
+        "aiMode": "preview_fallback"
+      },
+      {
+        "id": "user-1793476951755",
+        "role": "user",
+        "content": "What if my guest count increases?",
+        "timestamp": "2026-10-31T20:02:31.755Z"
+      },
+      {
+        "id": "ai-1793476952220",
+        "role": "assistant",
+        "content": "If your guest count for **Aarav & Meera’s Heritage Jaipur Wedding** increases from **180 to 216 guests (+36 guests)**:\n\n- **Food & Catering Impact:** At your current ~₹1,511/guest catering tier, expect an estimated **+₹54,396** increase.\n- **Seating & Centerpieces:** You will need **5 additional dining tables** and floral centerpieces.\n- **Fixed Costs Unchanged:** Your Photography and Entertainment fees stay constant.\n\nYou can also model exact headcount numbers interactively in the **Smart Budget Planner → What-If Simulator**.",
+        "reasoning": "Analyzed Aarav & Meera’s Heritage Jaipur Wedding (180 guests in Jaipur, Rajasthan, target ₹8,50,000, allocated ₹8,50,000, actual ₹8,44,000).",
+        "actions": [
+          {
+            "id": "act-1793476952209-3",
+            "type": "add_budget",
+            "label": "Add to Budget: +36 Guest Catering Buffer (₹54,396)",
+            "description": "Adds an estimated catering buffer line item for additional guests.",
+            "payload": {
+              "category": "Food and catering",
+              "title": "Supplemental Catering Buffer (+36 Guests Estimate)",
+              "allocatedAmount": 54396,
+              "plannedAmount": 54396
+            }
+          }
+        ],
+        "timestamp": "2026-10-31T20:02:32.220Z",
+        "aiMode": "preview_fallback"
+      },
+      {
+        "id": "user-1793477032493",
+        "role": "user",
+        "content": "What should I finish this week?",
+        "timestamp": "2026-10-31T20:03:52.493Z"
+      },
+      {
+        "id": "ai-1793477032531",
+        "role": "assistant",
+        "content": "For **Aarav & Meera’s Heritage Jaipur Wedding** (180 guests in Jaipur, Rajasthan on 2026-12-18):\n\n- **Financial Snapshot:** ₹8,44,000 actual spend out of ₹8,50,000 allocated (₹6,000 remaining).\n- **Timeline Priority:** You have **7 active milestones** remaining. Focus this week on locking final catering headcounts, confirming vendor load-in windows, and walking through your 8-stage **Moment Map**.\n- **Experience Enhancement:** Introduce a tactile welcome touchpoint (local craft artisan or handwritten place cards) so guests feel immersed from the first 5 minutes.",
+        "reasoning": "Analyzed Aarav & Meera’s Heritage Jaipur Wedding (180 guests in Jaipur, Rajasthan, target ₹8,50,000, allocated ₹8,50,000, actual ₹8,44,000).",
+        "actions": [
+          {
+            "id": "act-1793477032512-8",
+            "type": "add_task",
+            "label": "Add to Timeline: Complete Weekly Vendor Sync",
+            "description": "Adds a milestone task to verify vendor load-in and headcount.",
+            "payload": {
+              "title": "Sync with Venue & Caterer for 180-guest layout in Jaipur, Rajasthan",
+              "milestoneCategory": "Preparation milestone",
+              "priority": "High"
+            }
+          },
+          {
+            "id": "act-1793477032512-9",
+            "type": "save_idea",
+            "label": "Save Idea: Handwritten Welcome Place Cards",
+            "description": "Saves personalized guest place cards to your Ideas Studio.",
+            "payload": {
+              "title": "Calligraphed Guest Memory Place Cards",
+              "category": "Guest activities",
+              "description": "Personal 1-sentence note at every seat to spark immediate table conversation.",
+              "estimatedCost": 8500
+            }
+          }
+        ],
+        "timestamp": "2026-10-31T20:03:52.531Z",
+        "aiMode": "preview_fallback"
+      },
+      {
+        "id": "user-1793477327452",
+        "role": "user",
+        "content": "Am I exceeding my budget?",
+        "timestamp": "2026-10-31T20:08:47.455Z"
+      },
+      {
+        "id": "ai-1793477327995",
+        "role": "assistant",
+        "content": "Based on **Aarav & Meera’s Heritage Jaipur Wedding** (180 guests in Jaipur, Rajasthan), your total allocated budget is **₹8,50,000** against a target of **₹8,50,000**, with **₹8,44,000** in actual recorded expenses (99% utilized).\n\nHere are 3 concrete ways to recover **~₹68,000** immediately without compromising hospitality:\n1. **Multi-Function Decor Reuse:** Repurpose daytime floral structures into the evening reception by swapping marigold garlands for brass candle hurricanes (saves ~₹30,600).\n2. **Curated Signature Stations:** Focus Food & Catering on 3 high-impact regional live counters rather than an oversized buffet.\n3. **Digital-First RSVP Suite:** Keep printed keepsake invitations strictly for elders and VIPs.",
+        "reasoning": "Analyzed Aarav & Meera’s Heritage Jaipur Wedding (180 guests in Jaipur, Rajasthan, target ₹8,50,000, allocated ₹8,50,000, actual ₹8,44,000).",
+        "actions": [
+          {
+            "id": "act-1793477327957-1",
+            "type": "add_task",
+            "label": "Add to Timeline: Audit Decor Reuse with Decorator",
+            "description": "Creates a High-Priority task to reuse floral frames across functions.",
+            "payload": {
+              "title": "Audit multi-function decor reuse to save ₹30,600",
+              "milestoneCategory": "Decoration planning",
+              "priority": "High"
+            }
+          },
+          {
+            "id": "act-1793477327959-2",
+            "type": "save_idea",
+            "label": "Save Idea: Brass Hurricane Candlelight Swap",
+            "description": "Saves this cost-saving lighting concept to your Ideas Studio.",
+            "payload": {
+              "title": "Multi-Function Brass Hurricane & Local Foliage Swap",
+              "category": "Decoration",
+              "description": "Repurpose structural arches from afternoon to evening using brass lanterns to save ₹30,600.",
+              "estimatedCost": 25500
+            }
+          }
+        ],
+        "timestamp": "2026-10-31T20:08:47.995Z",
+        "aiMode": "preview_fallback"
+      },
+      {
+        "id": "user-1793478296267",
+        "role": "user",
+        "content": "Generate a vegetarian menu.",
+        "timestamp": "2026-10-31T20:24:56.268Z"
+      },
+      {
+        "id": "ai-1793478296396",
+        "role": "assistant",
+        "content": "Here is a curated menu concept tailored for **Aarav & Meera’s Heritage Jaipur Wedding** (180 guests in Jaipur, Rajasthan, honoring *100% pure vegetarian menu (with Jain options); elder-accessible seating in courtyard*):\n\n- **Welcome Refreshment:** Rosewater & saffron-cardamom thandai / botanical spritz served in terracotta kulhads or chilled coupe glasses.\n- **Interactive Live Starters:** Crisp Palak Patta Chaat, Jodhpuri Mirchi Vada, and charred herb flatbreads.\n- **Main Feast:** Heritage Dal Baati Churma / Saffron Cauliflower Steak, Paneer & Seasonal Vegetable Royal Thali, with a clearly separated **Strict Jain / Root-Free Counter**.\n- **Late-Evening Finale:** Piping hot Jalebi-Rabri & Kesar Badam Milk under the stars.",
+        "reasoning": "Analyzed Aarav & Meera’s Heritage Jaipur Wedding (180 guests in Jaipur, Rajasthan, target ₹8,50,000, allocated ₹8,50,000, actual ₹8,44,000).",
+        "actions": [
+          {
+            "id": "act-1793478296391-4",
+            "type": "save_idea",
+            "label": "Save Idea: Artisanal Vegetarian & Jain Live Menu",
+            "description": "Saves this bespoke menu concept to your Personalized Ideas Studio.",
+            "payload": {
+              "title": "Artisanal Vegetarian & Dedicated Jain Live Feast",
+              "category": "Food",
+              "description": "Live Palak Patta Chaat, separated Jain counter, and late-night kulhad Kesar milk.",
+              "estimatedCost": 34000
+            }
+          },
+          {
+            "id": "act-1793478296392-5",
+            "type": "add_task",
+            "label": "Add to Timeline: Lock Vegetarian & Jain Tasting",
+            "description": "Adds a catering confirmation task to your Event Timeline.",
+            "payload": {
+              "title": "Confirm dedicated Jain & vegetarian live station layout with Caterer",
+              "milestoneCategory": "Catering finalization",
+              "priority": "High"
+            }
+          }
+        ],
+        "timestamp": "2026-10-31T20:24:56.396Z",
+        "aiMode": "preview_fallback"
+      },
+      {
+        "id": "user-1793478330542",
+        "role": "user",
+        "content": "create a rainy weather backup plan",
+        "timestamp": "2026-10-31T20:25:30.542Z"
+      },
+      {
+        "id": "ai-1793478330612",
+        "role": "assistant",
+        "content": "Here is a proactive **Weather & Outdoor Backup Plan** for **Aarav & Meera’s Heritage Jaipur Wedding** in Jaipur, Rajasthan:\n\n1. **72-Hour Weather Lock:** Establish a T-72 hour decision checkpoint with your venue manager to deploy waterproof clear-span canopies or shift into the indoor hall.\n2. **Arrival Comfort (Moment Map Stage 1):** Station 30 oversized umbrellas and warm spiced welcome drinks at the entrance gate.\n3. **Acoustic & Power Protection:** Place all sound consoles and decorative brass uplights on elevated waterproof risers.",
+        "reasoning": "Analyzed Aarav & Meera’s Heritage Jaipur Wedding (180 guests in Jaipur, Rajasthan, target ₹8,50,000, allocated ₹8,50,000, actual ₹8,44,000).",
+        "actions": [
+          {
+            "id": "act-1793478330606-6",
+            "type": "add_task",
+            "label": "Add to Timeline: 72-Hour Weather Tenting Checkpoint",
+            "description": "Adds a High-Priority weather readiness milestone to your Timeline.",
+            "payload": {
+              "title": "Execute 72-hour weather forecast review & canopy standby check",
+              "milestoneCategory": "Final event-day preparation",
+              "priority": "High"
+            },
+            "applied": true
+          },
+          {
+            "id": "act-1793478330606-7",
+            "type": "add_budget",
+            "label": "Add to Budget: Weather Canopy Hold (₹42,500)",
+            "description": "Allocates a weather protection line item in Emergency Reserve.",
+            "payload": {
+              "category": "Emergency reserve",
+              "title": "Weatherproof Canopy & Umbrella Valet Standby Estimate",
+              "allocatedAmount": 42500,
+              "plannedAmount": 42500
+            },
+            "applied": true
+          }
+        ],
+        "timestamp": "2026-10-31T20:25:30.612Z",
+        "aiMode": "preview_fallback"
+      },
+      {
+        "id": "user-1793478479203",
+        "role": "user",
+        "content": "what should be included in the catering",
+        "timestamp": "2026-10-31T20:27:59.203Z"
+      },
+      {
+        "id": "ai-1793478479233",
+        "role": "assistant",
+        "content": "For **Aarav & Meera’s Heritage Jaipur Wedding** (180 guests in Jaipur, Rajasthan on 2026-12-18):\n\n- **Financial Snapshot:** ₹8,44,000 actual spend out of ₹8,92,500 allocated (₹48,500 remaining).\n- **Timeline Priority:** You have **8 active milestones** remaining. Focus this week on locking final catering headcounts, confirming vendor load-in windows, and walking through your 8-stage **Moment Map**.\n- **Experience Enhancement:** Introduce a tactile welcome touchpoint (local craft artisan or handwritten place cards) so guests feel immersed from the first 5 minutes.",
+        "reasoning": "Analyzed Aarav & Meera’s Heritage Jaipur Wedding (180 guests in Jaipur, Rajasthan, target ₹8,50,000, allocated ₹8,92,500, actual ₹8,44,000).",
+        "actions": [
+          {
+            "id": "act-1793478479219-8",
+            "type": "add_task",
+            "label": "Add to Timeline: Complete Weekly Vendor Sync",
+            "description": "Adds a milestone task to verify vendor load-in and headcount.",
+            "payload": {
+              "title": "Sync with Venue & Caterer for 180-guest layout in Jaipur, Rajasthan",
+              "milestoneCategory": "Preparation milestone",
+              "priority": "High"
+            }
+          },
+          {
+            "id": "act-1793478479219-9",
+            "type": "save_idea",
+            "label": "Save Idea: Handwritten Welcome Place Cards",
+            "description": "Saves personalized guest place cards to your Ideas Studio.",
+            "payload": {
+              "title": "Calligraphed Guest Memory Place Cards",
+              "category": "Guest activities",
+              "description": "Personal 1-sentence note at every seat to spark immediate table conversation.",
+              "estimatedCost": 8500
+            }
+          }
+        ],
+        "timestamp": "2026-10-31T20:27:59.233Z",
+        "aiMode": "preview_fallback"
+      },
+      {
+        "id": "user-1793478545926",
+        "role": "user",
+        "content": "how can i save 10% on decoration",
+        "timestamp": "2026-10-31T20:29:05.926Z"
+      },
+      {
+        "id": "ai-1793478545960",
+        "role": "assistant",
+        "content": "Based on **Aarav & Meera’s Heritage Jaipur Wedding** (180 guests in Jaipur, Rajasthan), your total allocated budget is **₹8,92,500** against a target of **₹8,50,000**, with **₹8,44,000** in actual recorded expenses (95% utilized).\n\nHere are 3 concrete ways to recover **~₹68,000** immediately without compromising hospitality:\n1. **Multi-Function Decor Reuse:** Repurpose daytime floral structures into the evening reception by swapping marigold garlands for brass candle hurricanes (saves ~₹30,600).\n2. **Curated Signature Stations:** Focus Food & Catering on 3 high-impact regional live counters rather than an oversized buffet.\n3. **Digital-First RSVP Suite:** Keep printed keepsake invitations strictly for elders and VIPs.",
+        "reasoning": "Analyzed Aarav & Meera’s Heritage Jaipur Wedding (180 guests in Jaipur, Rajasthan, target ₹8,50,000, allocated ₹8,92,500, actual ₹8,44,000).",
+        "actions": [
+          {
+            "id": "act-1793478545941-1",
+            "type": "add_task",
+            "label": "Add to Timeline: Audit Decor Reuse with Decorator",
+            "description": "Creates a High-Priority task to reuse floral frames across functions.",
+            "payload": {
+              "title": "Audit multi-function decor reuse to save ₹30,600",
+              "milestoneCategory": "Decoration planning",
+              "priority": "High"
+            }
+          },
+          {
+            "id": "act-1793478545942-2",
+            "type": "save_idea",
+            "label": "Save Idea: Brass Hurricane Candlelight Swap",
+            "description": "Saves this cost-saving lighting concept to your Ideas Studio.",
+            "payload": {
+              "title": "Multi-Function Brass Hurricane & Local Foliage Swap",
+              "category": "Decoration",
+              "description": "Repurpose structural arches from afternoon to evening using brass lanterns to save ₹30,600.",
+              "estimatedCost": 25500
+            }
+          }
+        ],
+        "timestamp": "2026-10-31T20:29:05.960Z",
+        "aiMode": "preview_fallback"
+      },
+      {
+        "id": "user-1793542645878",
+        "role": "user",
+        "content": "how can i save 10%more",
+        "timestamp": "2026-11-01T14:17:25.878Z"
+      },
+      {
+        "id": "ai-1793542646342",
+        "role": "assistant",
+        "content": "Based on **Aarav & Meera’s Heritage Jaipur Wedding** (180 guests in Jaipur, Rajasthan), your total allocated budget is **₹892,500** against a target of **₹850,000**, with **₹844,000** in actual recorded expenses (95% utilized).\n\nHere are 3 concrete ways to recover **~₹68,000** immediately without compromising hospitality:\n1. **Multi-Function Decor Reuse:** Repurpose daytime floral structures into the evening reception by swapping marigold garlands for brass candle hurricanes (saves ~₹30,600).\n2. **Curated Signature Stations:** Focus Food & Catering on 3 high-impact regional live counters rather than an oversized buffet.\n3. **Digital-First RSVP Suite:** Keep printed keepsake invitations strictly for elders and VIPs.",
+        "reasoning": "Analyzed Aarav & Meera’s Heritage Jaipur Wedding (180 guests in Jaipur, Rajasthan, target ₹850,000, allocated ₹892,500, actual ₹844,000).",
+        "actions": [
+          {
+            "id": "act-1793542646337-1",
+            "type": "add_task",
+            "label": "Add to Timeline: Audit Decor Reuse with Decorator",
+            "description": "Creates a High-Priority task to reuse floral frames across functions.",
+            "payload": {
+              "title": "Audit multi-function decor reuse to save ₹30,600",
+              "milestoneCategory": "Decoration planning",
+              "priority": "High"
+            }
+          },
+          {
+            "id": "act-1793542646337-2",
+            "type": "save_idea",
+            "label": "Save Idea: Brass Hurricane Candlelight Swap",
+            "description": "Saves this cost-saving lighting concept to your Ideas Studio.",
+            "payload": {
+              "title": "Multi-Function Brass Hurricane & Local Foliage Swap",
+              "category": "Decoration",
+              "description": "Repurpose structural arches from afternoon to evening using brass lanterns to save ₹30,600.",
+              "estimatedCost": 25500
+            }
+          }
+        ],
+        "timestamp": "2026-11-01T14:17:26.342Z",
         "aiMode": "preview_fallback"
       }
     ]
